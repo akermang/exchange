@@ -2,12 +2,12 @@ let EurUsdRates = [];
 let EurIlsRates = [];
 let EurBtcRates = [];
 
-const largeButton = $("#large").click(() => {
+const setLargeSize = () => {
   airChart.setSize(null, null);
   localStorage.removeItem("size");
-});
+};
 
-const smallButton = $("#small").click(() => {
+const setSmallSize = () => {
   airChart.setSize(300, 280);
   localStorage.setItem(
     "size",
@@ -16,7 +16,7 @@ const smallButton = $("#small").click(() => {
       height: airChart.chartHeight
     })
   );
-});
+};
 
 const setChartSize = () => {
   const size = JSON.parse(localStorage.getItem("size"));
@@ -101,4 +101,3 @@ fetchData("api/rates/1")
       setChartSize();
     });
   });
-
