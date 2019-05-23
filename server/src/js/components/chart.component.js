@@ -1,6 +1,9 @@
+const loader = document.querySelector("#loader");
 let EurUsdRates = [];
 let EurIlsRates = [];
 let EurBtcRates = [];
+
+const stopLoader = () => loader.remove();
 
 const setLargeSize = () => {
   airChart.setSize(null, null);
@@ -99,5 +102,6 @@ fetchData("api/rates/1")
       EurBtcRates = data;
       airChart = chart();
       setChartSize();
+      stopLoader();
     });
   });
