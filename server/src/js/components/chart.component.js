@@ -73,7 +73,7 @@ const chart = () =>
       rules: [
         {
           condition: {
-            maxWidth: "100%"
+            maxWidth: 500
           },
           chartOptions: {
             legend: {
