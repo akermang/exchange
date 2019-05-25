@@ -11,7 +11,7 @@ const setLargeSize = () => {
 };
 
 const setSmallSize = () => {
-  airChart.setSize(300, 280);
+  airChart.setSize(320, 280);
   localStorage.setItem(
     "size",
     JSON.stringify({
