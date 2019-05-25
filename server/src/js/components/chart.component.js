@@ -73,12 +73,11 @@ const chart = () =>
       rules: [
         {
           condition: {
-            maxWidth: 500
+            maxWidth: 320
           },
           chartOptions: {
             legend: {
-              layout: "horizontal",
-              align: "center",
+              layout: "vertical",
               verticalAlign: "bottom"
             }
           }
