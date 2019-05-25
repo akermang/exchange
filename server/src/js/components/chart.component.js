@@ -38,7 +38,10 @@ const chart = () =>
       text: "Source: TradAir"
     },
     xAxis: {
-      type: "datetime"
+      type: "datetime",
+      dateTimeLabelFormats: {
+        day: '%Y-%m-%e',
+    }
     },
     yAxis: {
       title: {
@@ -46,7 +49,6 @@ const chart = () =>
       }
     },
     legend: {
-      layout: "vertical",
       verticalAlign: "bottom"
     },
     tooltip: {
